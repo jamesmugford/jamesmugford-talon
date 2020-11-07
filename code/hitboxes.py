@@ -1,10 +1,11 @@
+#
+
 import os
 import os.path
 import requests
 import time
 from pathlib import Path
 from talon import cron, ctrl, ui, Module, Context, actions, noise, settings, imgui, canvas
-from talon.engine import engine
 from talon.track.geom import Point2d
 from talon_plugins import speech, eye_mouse, eye_zoom_mouse
 import math
@@ -29,7 +30,7 @@ scroll_amount = 0
 click_job = None
 scroll_job = None
 gaze_job = None
-cancel_scroll_on_pop = True
+cancel_scroll_on_pop = True  # type: bool
 gaze_pos2 = Point2d(0, 0)
 
 main_screen = ui.main_screen()

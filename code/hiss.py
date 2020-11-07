@@ -5,8 +5,7 @@
 import time
 
 from talon import ctrl
-from talon import tap
-from talon.audio import noise
+from talon import tap, noise
 from talon.track.geom import Point2d
 from talon_plugins import speech, eye_mouse, eye_zoom_mouse
 
