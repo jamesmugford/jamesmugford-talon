@@ -13,3 +13,5 @@ page: key(pgdown)
 invert: key(super-alt-n)
 
 sleep: key(plus)
+
+mouse: key(keypad_5)
