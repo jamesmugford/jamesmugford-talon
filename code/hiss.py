@@ -19,7 +19,7 @@ class NoiseModel:
         self.dragging = False
 
         tap.register(tap.MMOVE, self.on_move)
-        noise.register('noise', self.on_noise)
+        noise.register('hiss', self.on_noise)
 
     def on_move(self, typ, e):
         print('on_move')
@@ -35,7 +35,8 @@ class NoiseModel:
 
     def on_noise(self, noise):
         now = time.time()
-        if noise == 'hiss_start':
+        print(noise)
+        if noise == True:
             print('hiss start')
             eye_mouse.control_mouse.enable()
 
@@ -46,7 +47,7 @@ class NoiseModel:
             # else:
             #     self.mouse_origin = self.mouse_last
             # self.hiss_start = now
-        elif noise == 'hiss_end':
+        elif noise == False:
             eye_mouse.control_mouse.disable()
             # print('hiss end')
             # if self.dragging:
