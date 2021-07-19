@@ -39,6 +39,7 @@ class NoiseModel:
         if noise == True:
             print('hiss start')
             eye_mouse.control_mouse.enable()
+            ctrl.key_press("keypad_5")
 
             # if now - self.hiss_last < 0.25:
             #     ctrl.mouse_click(button=self.button, down=True)
@@ -47,8 +48,10 @@ class NoiseModel:
             # else:
             #     self.mouse_origin = self.mouse_last
             # self.hiss_start = now
-        elif noise == False:
+        else:
             eye_mouse.control_mouse.disable()
+            ctrl.key_press("keypad_5")
+            # ctrl.mouse_click(button=0)
             # print('hiss end')
             # if self.dragging:
             #     ctrl.mouse_click(button=self.button, up=True)
@@ -57,7 +60,7 @@ class NoiseModel:
             #     duration = time.time() - self.hiss_start
             #     if duration > 0.5:
             #         self.button = 1
-            #         #ctrl.mouse_click(button=1)
+            #         #ctrl.mouse_click(button=1)55
             #         self.hiss_last = now
             #     elif duration > 0.2:
             #         self.button = 0
