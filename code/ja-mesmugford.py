@@ -12,3 +12,4 @@ class Actions:
        """Switches the parrot mode around"""
        winsound.Beep(1000, 500)
        return
+
