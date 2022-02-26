@@ -40,9 +40,18 @@ wake:
 	speech.enable()
 	app.notify("Talon Awake")
 
-record: key(keypad_7)
-
-parrot(palate_click):
+record: 
 	key(keypad_7)
+	user.play_beep()
+
+
+parrot(tut):
 	print("tut again")
 	user.play_beep()
+	core.repeat_command(1)
+
+parrot(whistle):
+	key(keypad_7)
+	user.play_beep()
+	print("tut again")
+
