@@ -12,12 +12,9 @@ lock windows: key(super-l)
 
 page: key(pgdown)
 
-;start recording: key(ctrl-shift-alt-r)
-;start recording: key(r)
-
 invert: key(super-alt-n)
 
-sleep: key(plus)
+# sleep: key(plus)
 
 mouse: key(keypad_5)
 
@@ -36,13 +33,9 @@ trick last: key(ctrl-shift-tab)
 sleep:
 	speech.disable()
 	app.notify("Talon Sleep")
-wake:
+wake: 
 	speech.enable()
 	app.notify("Talon Awake")
-
-record: 
-	key(keypad_7)
-	user.play_beep()
 
 
 parrot(tut):
@@ -50,8 +43,4 @@ parrot(tut):
 	user.play_beep()
 	core.repeat_command(1)
 
-parrot(whistle):
-	key(keypad_7)
-	user.play_beep()
-	print("tut again")
 
