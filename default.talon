@@ -11,13 +11,13 @@ talon mode: user.talon_mode()
 
 snore:
 	#speech.disable()
-	app.notify("All Sleep")
+#	app.notify("All Sleep")
 	user.dragon_sleep()
 	
 key(ctrl-f7):
-	app.notify("All Sleep")
+#	app.notify("All Sleep")
 	user.dragon_sleep()
 
 key(ctrl-f8):
-	app.notify("All Wake")
+#	app.notify("All Wake")
 	user.dragon_wake()
