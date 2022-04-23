@@ -18,12 +18,16 @@ class Actions:
 
     def dragon_sleep():
         """For windows and Mac with Dragon, disables Talon commands and exits Dragon's command mode"""
+        actions.speech.disable()
+        
         engine = speech_system.engine.name
         # app.notify(engine)
+        
 
         if "dragon" in engine:
             # app.notify("dragon mode")
-            actions.speech.disable()
             actions.user.engine_wake()
             # note: this may not do anything for all versions of Dragon. Requires Pro.
             actions.user.engine_mimic("go to sleep")
+
+        
