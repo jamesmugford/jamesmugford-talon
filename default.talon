@@ -25,3 +25,7 @@ key(ctrl-f8):
 dredge: key(alt-tab)
 
 bulk message: key(f13)			
+
+
+key(f15):
+	core.repeat_command(1)

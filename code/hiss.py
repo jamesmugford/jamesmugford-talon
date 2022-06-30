@@ -8,6 +8,7 @@ from talon import ctrl
 from talon import tap, noise
 from talon.track.geom import Point2d
 from talon_plugins import speech, eye_mouse, eye_zoom_mouse
+from talon_plugins.eye_mouse import config, toggle_camera_overlay, toggle_control
 
 class NoiseModel:
     def __init__(self):
@@ -38,7 +39,8 @@ class NoiseModel:
         print(noise)
         if noise == True:
             print('hiss start')
-            eye_mouse.control_mouse.enable()
+#            eye_mouse.control_mouse.enable()
+            toggle_control(True)
             # thisctrl.key_press("keypad_5")
 
             # if now - self.hiss_last < 0.25:
@@ -49,7 +51,8 @@ class NoiseModel:
             #     self.mouse_origin = self.mouse_last
             # self.hiss_start = now
         else:
-            eye_mouse.control_mouse.disable()
+            #eye_mouse.control_mouse.disable()
+            toggle_control(False)
             # ctrl.key_press("keypad_5")
             # ctrl.mouse_click(button=0)
             # print('hiss end')

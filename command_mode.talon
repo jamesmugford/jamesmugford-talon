@@ -1,4 +1,4 @@
-mode: command
+mode: all
 -
 
 work next: key(ctrl-super-right)
@@ -27,9 +27,6 @@ switch:
 	user.mouse_toggle_control_mouse()
 	user.mouse_toggle_zoom_mouse()
 
-trick next: key(ctrl-tab)
-trick last: key(ctrl-shift-tab)
-
 sleep:
 	speech.disable()
 	app.notify("Talon Sleep")
@@ -43,4 +40,12 @@ parrot(tut):
 	user.play_beep()
 	core.repeat_command(1)
 
+dredge: key(alt-tab)
 
+bulk message: key(f13)
+
+key(f15):
+	core.repeat_command(1)
+
+dictation start: key(alt-p)
+dictation stop: key(alt-o)
