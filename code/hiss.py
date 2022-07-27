@@ -4,7 +4,7 @@
 
 import time
 
-from talon import ctrl
+from talon import ctrl, actions
 from talon import tap, noise
 from talon.track.geom import Point2d
 from talon_plugins import speech, eye_mouse, eye_zoom_mouse
@@ -40,7 +40,9 @@ class NoiseModel:
         if noise == True:
             print('hiss start')
 #            eye_mouse.control_mouse.enable()
-            toggle_control(True)
+            actions.tracking.control1_toggle(True)
+            #toggle_control1(True)
+            #actions.tracking.control_enabled()
             # thisctrl.key_press("keypad_5")
 
             # if now - self.hiss_last < 0.25:
@@ -52,7 +54,8 @@ class NoiseModel:
             # self.hiss_start = now
         else:
             #eye_mouse.control_mouse.disable()
-            toggle_control(False)
+            actions.tracking.control1_toggle(False)
+            #toggle_control(False)
             # ctrl.key_press("keypad_5")
             # ctrl.mouse_click(button=0)
             # print('hiss end')

@@ -22,10 +22,3 @@ key(ctrl-f8):
 #	app.notify("All Wake")
 	user.dragon_wake()
 
-dredge: key(alt-tab)
-
-bulk message: key(f13)			
-
-
-key(f15):
-	core.repeat_command(1)
