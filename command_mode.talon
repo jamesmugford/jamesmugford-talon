@@ -1,4 +1,3 @@
-mode: all
 -
 
 work next: key(ctrl-super-right)
@@ -27,7 +26,7 @@ switch:
 	user.mouse_toggle_control_mouse()
 	user.mouse_toggle_zoom_mouse()
 
-sleep:
+snore:
 	speech.disable()
 	app.notify("Talon Sleep")
 wake: 
@@ -49,3 +48,6 @@ key(f15):
 
 dictation start: key(alt-p)
 dictation stop: key(alt-o)
+
+pause: key(alt-1)
+recenter: key(alt-2)
