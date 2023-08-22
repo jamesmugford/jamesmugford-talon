@@ -6,8 +6,8 @@ import time
 
 from talon import ctrl, actions
 from talon import tap, noise
-from talon.track.geom import Point2d
-from talon_plugins import speech, eye_mouse, eye_zoom_mouse
+from talon.types import Point2d
+from talon_plugins import eye_mouse, eye_zoom_mouse
 from talon_plugins.eye_mouse import config, toggle_camera_overlay, toggle_control
 
 class NoiseModel:

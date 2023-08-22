@@ -29,10 +29,6 @@ switch:
 snore:
 	speech.disable()
 	app.notify("Talon Sleep")
-wake: 
-	speech.enable()
-	app.notify("Talon Awake")
-
 
 parrot(tut):
 	print("tut again")
@@ -41,13 +37,21 @@ parrot(tut):
 
 dredge: key(alt-tab)
 
-bulk message: key(f13)
-
-key(f15):
-	core.repeat_command(1)
-
 dictation start: key(alt-p)
 dictation stop: key(alt-o)
 
 pause: key(alt-1)
 recenter: key(alt-2)
+
+track: key(f9)
+
+bulk message: key(f13)
+
+
+# Function key hotkey mappings
+
+# f14 = some auto hotkey debug test
+
+key(f15): bcore.repeat_phrase(1)
+
+key(f16): speech.toggle()
